@@ -1,8 +1,8 @@
 # Running locally
 
-## Just run it
+## Just run it (local or Docker)
 
-If you have everythng brewed into your OS:
+If you have everything brewed into your OS:
 
 ```
 make
@@ -17,6 +17,7 @@ docker run -p 8080:8080 -it --name erlc erlc
 ```
 
 > When you were doing some building locally and now wanna build it in docker, you need to remove fe directories first.
+
 > To make things easier for myself and avoid having to maintain same list twice, I made small script:
 > ```
 > ./dev_pre_build.sh
@@ -28,7 +29,7 @@ Cleanup docker to be able to rebuild and rerun:
 docker stop erlc | docker rm erlc
 ```
 
-Kill **all** Erlang processes:
+Kill **all** Erlang processes(in case you were running it not containerized and it got messy):
 
 ```
 for i in `ps -ef | grep erl | awk '{print $2}'`; do echo $i; kill -9 $i; done
