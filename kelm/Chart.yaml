@@ -1,0 +1,11 @@
+apiVersion: v1
+name: microserver/chart
+description: microserver project chart
+version: 0.0.0
+tillerVersion: '>=2.10.0'
+keywords:
+  - microservices
+  - kubernetes
+maintainers:
+  - name: Rastko
+    email: rastko.vukasinovic@gmail.com
