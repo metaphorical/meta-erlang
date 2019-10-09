@@ -2,7 +2,7 @@ name: microserver-erlang
 host: microserver.erlang
 container: 
   name: erlang
-  image: localhost:5000/microserver/erlang:0.0.1
+  image: quay.io/metaphorical/cowboy-simple-api:latest
   port: 8080
 ingress:
   name: microserver-ingress
